@@ -16,16 +16,6 @@
 </head>
 
 <body>
-	<div class="parallax-mirror"
-		style="visibility: hidden; z-index: -100; position: fixed; top: 0px; left: 0px; overflow: hidden; height: 400px; width: 1621px; transform: translate3d(0px, 1353.58px, 0px);">
-		<img class="parallax-slider" src="./assets/newsletter.jpg"
-			style="position: absolute; height: 470px; width: 2005px; max-width: none; transform: translate3d(-192px, -147.716px, 0px);">
-	</div>
-	<div class="parallax-mirror"
-		style="visibility: hidden; z-index: -100; position: fixed; top: 0px; left: 0px; overflow: hidden; height: 670.672px; width: 1621px; transform: translate3d(0px, 1362.91px, 0px);">
-		<img class="parallax-slider" src="./assets/extra.jpg"
-			style="position: absolute; height: 810px; width: 2342px; max-width: none; transform: translate3d(-360px, -272.581px, 0px);">
-	</div>
 	<div class="super_container">
 
 		<header class="header trans_400">
@@ -42,8 +32,6 @@
 					<ul class="d-flex flex-row align-items-center justify-content-start">
 						<li><a href="/">Start</a></li>
 						<li class="active"><a href="/medlemsansokan">Medlemsansökan</a></li>
-						<li><a href="/styrelsen">Styrelsen</a></li>
-						<li><a href="/stadgar">Stadgar</a></li>
 					</ul>
 				</nav>
 				<div class="header_extra d-flex flex-row align-items-center justify-content-end ml-auto">
@@ -66,8 +54,6 @@
 				<ul>
 					<li><a href="/">Start</a></li>
 					<li><a href="/medlemsansokan">Medlemsansökan</a></li>
-					<li><a href="/styrelsen">Styrelsen</a></li>
-					<li><a href="/stadgar">Stadgar</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -94,18 +80,26 @@
 
 					<div class="col-lg-6 intro_col">
 						<div class="intro_form_container">
-							<div class="intro_form_title">Medlemsanmälan</div>
-							<form action="https://preview.colorlib.com/theme/drpro/#" id="anmalan_form">
+							<div class="intro_form_title">Medlemsansökan</div>
+							<form action="https://apnesyd.jonas-lewin.workers.dev/submit" method="POST" id="anmalan_form">
 								<div class="d-flex flex-row align-items-start justify-content-between flex-wrap">
-									<input type="text" class="intro_input" placeholder="Förnamn" required="required">
-									<input type="text" class="intro_input" placeholder="Efternamn" required="required">
-									<input type="text" class="intro_input" placeholder="Personnummer" required="required">
-									<input type="email" class="intro_input" placeholder="E-Post" required="required">
-									<input type="tel" class="intro_input" placeholder="Mobilnummer">
-									<input type="text" class="intro_input" placeholder="Adress" required="required">
-									<input type="text" class="intro_input" placeholder="Postnummer" required="required">
-									<input type="text" class="intro_input" placeholder="Ort" required="required">
+									<input id="fornamn" name="fornamn" type="text" class="intro_input" placeholder="Förnamn" required="required">
+									<input id="efternamn" name="efternamn" type="text" class="intro_input" placeholder="Efternamn" required="required">
+									<input id="kon" name="kon" type="text" class="intro_input" placeholder="Kön">
+									<input id="personnummer" name="personnummer" type="text" class="intro_input" placeholder="Personnummer" required="required">
+									<input id="epost" name="epost" type="email" class="intro_input" placeholder="E-Post" required="required">
+									<input id="mobilnummer" name="mobilnummer" type="tel" class="intro_input" placeholder="Mobilnummer">
+									<input id="adress" name="adress" type="text" class="intro_input" placeholder="Adress" required="required">
+									<input id="postnummer" name="postnummer" type="text" class="intro_input" placeholder="Postnummer" required="required">
+									<input id="ort" name="ort" type="text" class="intro_input" placeholder="Ort" required="required">
+									<select id="medlemskap" name="medlemskap" class="intro_select intro_input" required="required">
+										<option disabled="" selected="" value="">Välj medlemskap</option>
+										<option value="Medlem">Medlem med rösträtt</option>
+										<option value="Stödmedlem">Stödmedlem</option>
+									</select>
 								</div>
+								<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+								<div class="cf-turnstile" data-sitekey="0x4AAAAAAB663dOyLFeGmTWE"></div>
 								<button class="button button_1 intro_button trans_200">Anmäl mig</button>
 							</form>
 						</div>

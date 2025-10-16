@@ -1309,3 +1309,8 @@ section
 {
 	color: #0083cb;
 }
+#kon {
+	position: absolute;
+	left: -10000px;
+	visibility: hidden;
+}
