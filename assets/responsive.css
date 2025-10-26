@@ -145,7 +145,7 @@
 	}
 	.intro_form_container
 	{
-		margin-top: 102px;
+		margin-top: 3em;
 	}
 	.why_image
 	{
@@ -267,7 +267,7 @@
 	.home
 	{
 		margin-top: 60px;
-		height: calc(100vh - 60px)
+		/* height: calc(100vh - 60px) */
 	}
 	.logo a > div:first-child
 	{
